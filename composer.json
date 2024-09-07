@@ -24,7 +24,10 @@
             "Core\\": "src/core",
             "Database\\Factories\\": "src/database/factories/",
             "Database\\Seeders\\": "src/database/seeders/"
-        }
+        },
+        "files": [
+            "src/core/Shared/Infrastructure/Helpers/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
