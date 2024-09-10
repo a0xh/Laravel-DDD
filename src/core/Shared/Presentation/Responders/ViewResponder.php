@@ -9,7 +9,7 @@ final readonly class ViewResponder implements Responsable
 {
     public function __construct(
         private string $view,
-        private ?array $data = []
+        private array $data = []
     ) {}
 
     public function toResponse($request): \Illuminate\View\View

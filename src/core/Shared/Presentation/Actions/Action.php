@@ -3,10 +3,11 @@
 namespace Core\Shared\Presentation\Actions;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Routing\Controller as BaseAction;
+use Illuminate\Routing\Controller as BaseController;
 
-class Action extends BaseAction
+class Action extends BaseController
 {
-    use AuthorizesRequests, ValidatesRequests;
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
