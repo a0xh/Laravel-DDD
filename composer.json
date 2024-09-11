@@ -26,7 +26,7 @@
             "Database\\Seeders\\": "src/database/seeders/"
         },
         "files": [
-            "src/core/Shared/Infrastructure/Helpers/helpers.php"
+            "src/core/Web/Shared/Infrastructure/Helpers/helpers.php"
         ]
     },
     "autoload-dev": {

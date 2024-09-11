@@ -1,9 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Database\Factories;
 
 use Illuminate\Support\Facades\Hash;
-use Core\Infrastructure\Models\User;
+use Core\Web\Shared\Infrastructure\Models\UserModel;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile;
@@ -14,7 +14,7 @@ use Faker\Generator;
  */
 class UserFactory extends Factory
 {
-    protected $model = User::class;
+    protected $model = UserModel::class;
 
     /**
      * The current password being used by the factory.
@@ -30,9 +30,13 @@ class UserFactory extends Factory
     {
         return [
             'avatar' => UploadedFile::fake()->image(
-                Str::of(uniqid())->append('.')->finish('jpg')->toString(), 50, 50
+                name: uniqid() . '.jpg',
+                width: 50,
+                height: 50
             )->store(
-                path: Str::of('images')->append('/')->finish(date('Y-m-d'))->toString(),
+                path: 'images/' . date(
+                    format: 'Y-m-d'
+                ),
                 options: []
             ),
             'first_name' => fake()->unique()->firstName(),

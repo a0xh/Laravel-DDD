@@ -3,7 +3,9 @@
 /public/hot
 /public/storage
 /storage/*.key
-/vendor
+/public/css
+/public/img
+/public/js
 .env
 .env.backup
 .env.production

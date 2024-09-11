@@ -1,8 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Database\Factories;
 
-use Core\Infrastructure\Models\Role;
+use Core\Web\Shared\Infrastructure\Models\RoleModel;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Faker\Generator;
 
@@ -11,7 +11,7 @@ use Faker\Generator;
  */
 class RoleFactory extends Factory
 {
-    protected $model = Role::class;
+    protected $model = RoleModel::class;
 
     /**
      * Define the model's default state.

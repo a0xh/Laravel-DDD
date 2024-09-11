@@ -1,37 +1,43 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
+use Core\Web\Shared\Infrastructure\Models\{RoleModel, UserModel};
 use Illuminate\Support\{Str, Collection};
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Core\Infrastructure\Models\{Role, User};
 
 class UserTableSeeder extends Seeder
 {
+    public function __construct(
+        private readonly RoleModel $role,
+        private readonly UserModel $user
+    ) {}
+
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $admin = new User();
-        $admin->avatar = null;
-        $admin->first_name = 'Nobody';
-        $admin->last_name = null;
-        $admin->email = 'admin@mail.ru';
-        $admin->email_verified_at = now();
-        $admin->password = Hash::make(
-            value: '#Admin1234#',
-            options: []
-        );
-        $admin->status = true;
-        $admin->remember_token = Str::random(
-            length: 10
-        );
-        $admin->save();
-        $admin->roles()->attach(
-            id: Role::query()->where(
+        $this->user->query()->create(
+            attributes: [
+                'avatar' => null,
+                'first_name' => 'Nobody',
+                'last_name' => null,
+                'email' => 'admin@mail.ru',
+                'email_verified_at' => now(),
+                'password' => Hash::make(
+                    value: '#Admin1234#',
+                    options: []
+                ),
+                'remember_token' => Str::random(
+                    length: 10
+                ),
+                'status' => true
+            ]
+        )->roles()->attach(
+            id: $this->role->query()->where(
                 column: 'slug',
                 operator: '=',
                 value: 'admin'
@@ -40,16 +46,20 @@ class UserTableSeeder extends Seeder
             touch: true
         );
 
-        User::factory()->count(count: 40)->create();
+        $this->user->factory()->count(
+            count: 40
+        )->create();
 
-        $roles = Role::get(columns: ['id'])->all();
-
-        User::all()->each(function ($user) use ($roles) { 
-            $user->roles()->sync(
-                ids: collect(
-                    value: $roles
-                )->random()->toArray()
-            ); 
-        });
+        $this->user->all()->each(
+            callback: function ($user): void { 
+                $user->roles()->sync(
+                    ids: collect(
+                        value: $this->role->get(
+                            columns: ['id']
+                        )->all()
+                    )->random()->toArray()
+                );
+            }
+        );
     }
 }
