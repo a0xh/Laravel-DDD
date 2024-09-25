@@ -14,9 +14,14 @@ final class UserModel
         $this->model = $collection;
     }
 
+    public function save(UserEntity $entity): void
+    {
+        $this->model[$entity->getId()->value()] = $entity;
+    }
+
     public function find(UserId $uuid)
     {
-        return $this->model[$uuid->asString()] ?? null;
+        return $this->model[$uuid->value()] ?? null;
     }
 
     public function all(): array
@@ -24,13 +29,8 @@ final class UserModel
         return $this->model;
     }
 
-    public function save(UserEntity $entity): void
-    {
-        $this->model[$entity->getId()->asString()] = $entity;
-    }
-
     public function delete(UserId $uuid): void
     {
-        unset($this->model[$uuid->asString()]);
+        unset($this->model[$uuid->value()]);
     }
 }

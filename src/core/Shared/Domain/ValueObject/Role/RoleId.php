@@ -4,7 +4,7 @@ namespace Core\Shared\Domain\ValueObject\Role;
 
 use Core\Shared\Domain\Contract\ValueObjectContract;
 
-final class RoleId
+final class RoleId implements ValueObjectContract
 {
     private readonly string $id;
 
@@ -21,7 +21,7 @@ final class RoleId
         $this->id = $value;
     }
 
-    public function asString(): string
+    public function value(): string
     {
         return $this->id;
     }

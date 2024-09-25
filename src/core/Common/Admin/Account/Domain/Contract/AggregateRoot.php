@@ -2,12 +2,11 @@
 
 namespace Core\Common\Admin\Account\Domain\Contract;
 
-use Core\Common\Admin\Account\Domain\Entity\{UserEntity, RoleEntity};
-use Core\Shared\Domain\ValueObject\Role\RoleId;
+use Core\Common\Admin\Account\Domain\Model\UserModel;
+use Core\Common\Admin\Account\Domain\Model\RoleModel;
 
 interface AggregateRoot
 {
-    public function add(UserEntity $user, RoleEntity $role): void;
-    public function with(UserEntity $user, RoleId $id): void;
-    public function get(): array;
+    public function user(): UserModel;
+    public function role(): RoleModel;
 }

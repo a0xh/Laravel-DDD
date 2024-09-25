@@ -13,7 +13,7 @@ class AggregateServiceProvider extends ServiceProvider
     {
         $this->app->when(
             concrete: [
-                \Core\Common\Admin\Account\Application\Service\CollectionUserService::class
+                \Core\Common\Admin\Account\Application\Service\UserService::class
             ]
         )->needs(
             abstract: \Core\Common\Admin\Account\Domain\Contract\AggregateRoot::class

@@ -2,7 +2,9 @@
 
 namespace Core\Shared\Domain\ValueObject\User;
 
-final class UserId
+use Core\Shared\Domain\Contract\ValueObjectContract;
+
+final class UserId implements ValueObjectContract
 {
     private readonly string $id;
 
@@ -19,7 +21,7 @@ final class UserId
         $this->id = $value;
     }
 
-    public function asString(): string
+    public function value(): string
     {
         return $this->id;
     }

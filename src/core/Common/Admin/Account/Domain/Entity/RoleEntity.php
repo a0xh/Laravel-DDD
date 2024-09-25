@@ -8,24 +8,24 @@ use Core\Shared\Domain\ValueObject\Role\Slug;
 
 final class RoleEntity
 {
-    public function __construct(
-        private readonly RoleId $id,
-        private readonly Name $name,
-        private readonly Slug $slug
-    ) {}
+	public function __construct(
+		private readonly RoleId $id,
+		private readonly Name $name,
+		private readonly Slug $slug,
+	) {}
 
-    public function getId(): RoleId
-    {
-        return $this->id;
-    }
+	public function getId(): RoleId
+	{
+		return $this->id;
+	}
 
-    public function getName(): Name
-    {
-        return $this->name;
-    }
+	public function getName(): Name
+	{
+		return $this->name;
+	}
 
-    public function getSlug(): Slug
-    {
-        return $this->slug;
-    }
+	public function getSlug(): Slug
+	{
+		return $this->slug;
+	}
 }

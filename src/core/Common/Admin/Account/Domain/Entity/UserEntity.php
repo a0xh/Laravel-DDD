@@ -7,7 +7,6 @@ use Core\Shared\Domain\ValueObject\User\Avatar;
 use Core\Shared\Domain\ValueObject\User\FirstName;
 use Core\Shared\Domain\ValueObject\User\LastName;
 use Core\Shared\Domain\ValueObject\User\Email;
-use Core\Shared\Domain\ValueObject\User\Password;
 use Core\Shared\Domain\ValueObject\User\Status;
 
 final class UserEntity
@@ -18,9 +17,8 @@ final class UserEntity
 		private readonly FirstName $firstName,
 		private readonly ?LastName $lastName,
 		private readonly Email $email,
-		private readonly Password $password,
 		private readonly Status $status,
-		public ?array $roles = [],
+		private readonly array $roles,
 	) {}
 
 	public function getId(): UserId
@@ -48,9 +46,9 @@ final class UserEntity
 		return $this->email;
 	}
 
-	public function getPassword(): Password
+	public function getStatus(): Status
 	{
-		return $this->password;
+		return $this->status;
 	}
 
 	public function getRoles(): array

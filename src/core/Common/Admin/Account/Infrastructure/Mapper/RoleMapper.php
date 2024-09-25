@@ -9,14 +9,18 @@ use Illuminate\Database\Eloquent\Collection;
 
 final class RoleMapper
 {
-    public static function fromCollection(Collection $eloquent): RoleEntity
+    public static function fromCollection(Collection $eloquent): array
     {
+        $data = [];
+
         foreach ($eloquent as $role) {
-            return RoleFactory::new(entity: [
+            $data[$role->id] = RoleFactory::create(collection: [
                 'id' => new RoleId(value: $role->id),
                 'name' => new Name(value: $role->name),
-                'slug' => new Slug(value: $role->slug)
+                'slug' => new Slug(value: $role->slug),
             ]);
         }
+
+        return $data;
     }
 }
