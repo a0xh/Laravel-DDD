@@ -3,7 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Support\Facades\Hash;
-use Core\Web\Shared\Infrastructure\Models\UserModel;
+use Core\Shared\Infrastructure\Eloquents\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile;
@@ -14,7 +14,7 @@ use Faker\Generator;
  */
 class UserFactory extends Factory
 {
-    protected $model = UserModel::class;
+    protected $model = User::class;
 
     /**
      * The current password being used by the factory.

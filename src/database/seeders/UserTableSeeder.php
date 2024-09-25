@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Core\Web\Shared\Infrastructure\Models\{RoleModel, UserModel};
+use Core\Shared\Infrastructure\Eloquents\{Role, User};
 use Illuminate\Support\{Str, Collection};
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Hash;
 class UserTableSeeder extends Seeder
 {
     public function __construct(
-        private readonly RoleModel $role,
-        private readonly UserModel $user
+        private readonly Role $role,
+        private readonly User $user
     ) {}
 
     /**
@@ -51,7 +51,7 @@ class UserTableSeeder extends Seeder
         )->create();
 
         $this->user->all()->each(
-            callback: function ($user): void { 
+            callback: function (UserModel $user): void { 
                 $user->roles()->sync(
                     ids: collect(
                         value: $this->role->get(

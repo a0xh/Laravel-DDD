@@ -26,13 +26,8 @@
             "Database\\Seeders\\": "src/database/seeders/"
         },
         "files": [
-            "src/core/Web/Shared/Infrastructure/Helpers/helpers.php"
+            "src/core/Shared/Infrastructure/Helper/helpers.php"
         ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
     },
     "scripts": {
         "post-autoload-dump": [

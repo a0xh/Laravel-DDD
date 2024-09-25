@@ -4,12 +4,12 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Core\Web\Shared\Infrastructure\Models\RoleModel;
+use Core\Shared\Infrastructure\Eloquents\Role;
 
 class RoleTableSeeder extends Seeder
 {
     public function __construct(
-        private readonly RoleModel $role
+        private readonly Role $role
     ) {}
 
     /**

@@ -21,7 +21,7 @@
 					<div data-uk-navbar>
 
 						<div class="uk-navbar-left">
-							<a href="{{ route('home') }}" class="uk-navbar-item uk-logo uk-visible@m">
+							<a href="{{ route('index') }}" class="uk-navbar-item uk-logo uk-visible@m">
 								{{ '@' . config('app.name') }}
 							</a>
 						</div>
@@ -35,17 +35,12 @@
 										<ul class="uk-nav uk-navbar-dropdown-nav">
 											<li>
 												<a href="{{ url('/ddd') }}">
-													{{ __('— Clean Architecture') }}
+													{{ __('— Software Architecture') }}
 												</a>
 											</li>
 											<li>
 												<a href="{{ url('/laravel') }}">
-													{{ __('— Framework Laravel') }}
-												</a>
-											</li>
-											<li>
-												<a href="{{ url('/php') }}">
-													{{ __('— Theory/Principles') }}
+													{{ __('— Фреймворк Laravel') }}
 												</a>
 											</li>
 										</ul>
@@ -56,7 +51,7 @@
 						</div>
 
 						<div class="uk-navbar-left uk-hidden@m">
-							<a href="{{ route('home') }}" class="uk-navbar-item uk-logo" style="margin-left: 9%;">
+							<a href="{{ route('index') }}" class="uk-navbar-item uk-logo" style="margin-left: 9%;">
 								{{ config('app.name') }}
 							</a>
 						</div>
@@ -65,23 +60,9 @@
 							<ul class="uk-navbar-nav uk-visible@m">
 								<li>
 									<div class="uk-navbar-item">
-				                        @guest
-				                            @if (Route::has('login'))
-					                            <a href="{{ route('login') }}" class="uk-button uk-button-success">
-					                            	{{ __('Авторизация') }}
-					                            </a>
-				                            @endif
-				                        @else
-					                        @if (Route::has('admin.index'))
-						                        <a href="{{ route('admin.index') }}" class="uk-button uk-button-success">
-						                        	{{ __('Панель управления') }}
-						                        </a>
-						                    @else
-						                    	<a href="#" class="uk-button uk-button-success">
-						                        	{{ __('Подписаться') }}
-						                        </a>
-					                        @endif
-				                        @endguest
+				                    	<a href="#" class="uk-button uk-button-success">
+				                        	{{ __('Подписаться') }}
+				                        </a>
 									</div>
 								</li>
 							</ul>
@@ -100,7 +81,7 @@
 
 		<div id="menu" data-uk-offcanvas="flip: true; overlay: true">
 			<div class="uk-offcanvas-bar">
-				<a href="{{ route('home') }}" class="uk-logo">{{ config('app.name') }}</a>
+				<a href="{{ route('index') }}" class="uk-logo">{{ config('app.name') }}</a>
 				<button class="uk-offcanvas-close" type="button" data-uk-close></button>
 
 				<ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-margin-top">
@@ -161,7 +142,7 @@
 				</div>
 
 				<div class="uk-margin-medium uk-text-small copyright link-secondary">
-					{!! __('© Copyright <a href="' . route('home') . '">' . '«' . config('app.name') . '»' . '</a> | Все права защищены') !!}
+					{!! __('© Copyright <a href="' . route('index') . '">' . '«' . config('app.name') . '»' . '</a> | Все права защищены') !!}
 				</div>
 
 			</div>
