@@ -3,7 +3,7 @@
 namespace Core\Common\Admin\Account\Application\Service;
 
 use Core\Common\Admin\Account\Domain\Repository\RepositoryInterface;
-use Core\Common\Admin\Account\Domain\Contract\AggregateRoot;
+use Core\Common\Admin\Account\Domain\Model\UserModel;
 use Core\Shared\Domain\ValueObject\User\UserId;
 use Core\Common\Admin\Account\Infrastructure\Mapper\UserMapper;
 use Core\Shared\Infrastructure\Eloquent\User as UserEloquent;
@@ -15,21 +15,21 @@ final class UserService
 {
     public function __construct(
         private readonly RepositoryInterface $repository,
-        private readonly AggregateRoot $aggregate
+        private readonly UserModel $model
     ) {}
 
-    public function all(): LengthAwarePaginator
+    public function paginate(): LengthAwarePaginator
     {
         foreach ($this->repository->all() as $eloquent) {
-            $this->aggregate->user()->save(
+            $this->model->save(
                 entity: UserMapper::fromEloquent(
-                    query: $eloquent
+                    user: $eloquent
                 )
             );
         }
 
         return new Paginator(
-            collection: $this->aggregate->user()->all()
+            collection: $this->model->all()
         );
     }
 
@@ -37,12 +37,12 @@ final class UserService
     {
         $user = $this->repository->find(id: $id->value());
 
-        $this->aggregate->user()->save(
+        $this->model->save(
             entity: UserMapper::fromEloquent(
-                query: $user
+                user: $user
             )
         );
 
-        return $this->aggregate->user()->find(uuid: $id);
+        return $this->model->find(uuid: $id);
     }
 }

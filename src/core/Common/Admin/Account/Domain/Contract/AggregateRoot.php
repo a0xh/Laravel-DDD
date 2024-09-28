@@ -2,11 +2,10 @@
 
 namespace Core\Common\Admin\Account\Domain\Contract;
 
-use Core\Common\Admin\Account\Domain\Model\UserModel;
-use Core\Common\Admin\Account\Domain\Model\RoleModel;
+use Core\Common\Admin\Account\Domain\Entity\UserEntity;
 
 interface AggregateRoot
 {
-    public function user(): UserModel;
-    public function role(): RoleModel;
+    public function user(): UserEntity;
+    public function roles(): array;
 }

@@ -5,30 +5,30 @@ namespace Core\Shared\Domain\ValueObject\Role;
 use Core\Shared\Domain\Contract\RoleVisitable;
 use Core\Shared\Domain\Contract\RoleVisitor;
 
-final class Name implements RoleVisitable
+final class Uuid implements RoleVisitable
 {
-    private readonly string $name;
+    private readonly string $uuid;
 
     public function __construct(string $value)
     {
         $message = 'The Value Cannot Be Empty!';
-
+        
         if (!filled(value: $value)) {
             throw new \InvalidArgumentException(
                 message: $message
             );
         }
 
-        $this->name = $value;
+        $this->uuid = $value;
     }
 
     public function value(): string
     {
-        return $this->name;
+        return $this->uuid;
     }
 
     public function accept(RoleVisitor $visitor): string
     {
-        return $visitor->visitName(name: $this);
+        return $visitor->visitUuid(name: $this);
     }
 }

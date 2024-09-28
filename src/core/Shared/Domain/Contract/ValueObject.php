@@ -2,7 +2,7 @@
 
 namespace Core\Shared\Domain\Contract;
 
-interface ValueObjectContract
+interface ValueObject
 {
     public function value();
 }

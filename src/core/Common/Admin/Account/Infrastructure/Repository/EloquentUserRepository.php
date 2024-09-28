@@ -55,7 +55,18 @@ final class EloquentUserRepository implements RepositoryInterface
     public function create(array $attributes): bool
     {
         return $this->eloquent->query()->create(
-            attributes: $attributes
+            attributes: [
+                'avatar' => $attributes['avatar'],
+                'first_name' => $attributes['first_name'],
+                'last_name' => $attributes['last_name'],
+                'email' => $attributes['email'],
+                'password' => $attributes['password'],
+                'status' => $attributes['status'],
+            ]
+        )->sync(
+            ids: $attributes['roles']
+        )->saveOrFail(
+            options: []
         );
     }
 
@@ -66,7 +77,16 @@ final class EloquentUserRepository implements RepositoryInterface
             operator: '=',
             value: $id
         )->update(
-            values: $values
+            values: [
+                'avatar' => $values['avatar'],
+                'first_name' => $values['first_name'],
+                'last_name' => $values['last_name'],
+                'email' => $values['email'],
+                'password' => $values['password'],
+                'status' => $values['status'],
+            ]
+        )->sync(
+            ids: $values['roles']
         );
     }
 

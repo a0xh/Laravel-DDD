@@ -2,9 +2,10 @@
 
 namespace Core\Shared\Domain\ValueObject\Role;
 
-use Core\Shared\Domain\Contract\ValueObjectContract;
+use Core\Shared\Domain\Contract\RoleVisitable;
+use Core\Shared\Domain\Contract\RoleVisitor;
 
-final class Slug implements ValueObjectContract
+final class Slug implements RoleVisitable
 {
     private readonly string $slug;
 
@@ -24,5 +25,10 @@ final class Slug implements ValueObjectContract
     public function value(): string
     {
         return $this->slug;
+    }
+
+    public function accept(RoleVisitor $visitor): string
+    {
+        return $visitor->visitSlug(name: $this);
     }
 }

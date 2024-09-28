@@ -79,7 +79,7 @@
                                                     <td>
                                                         @empty (!$user->getRoles())
                                                             @foreach ($user->getRoles() as $role)
-                                                                {{ $role->getName()->value() }}
+                                                                {{ $role->getName() }}
                                                             @endforeach
                                                         @endempty
                                                     </td>

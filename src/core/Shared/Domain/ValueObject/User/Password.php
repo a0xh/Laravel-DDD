@@ -2,7 +2,9 @@
 
 namespace Core\Shared\Domain\ValueObject\User;
 
-final class Password
+use Core\Shared\Domain\Contract\ValueObject;
+
+final class Password implements ValueObject
 {
     private readonly string $password;
 

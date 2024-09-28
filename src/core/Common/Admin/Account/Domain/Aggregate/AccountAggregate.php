@@ -3,22 +3,41 @@
 namespace Core\Common\Admin\Account\Domain\Aggregate;
 
 use Core\Common\Admin\Account\Domain\Contract\AggregateRoot;
-use Core\Common\Admin\Account\Domain\Model\{UserModel, RoleModel};
+use Core\Common\Admin\Account\Domain\Entity\UserEntity;
 
 final class AccountAggregate implements AggregateRoot
 {
-    public function __construct(
-        private readonly UserModel $userModel,
-        private readonly RoleModel $roleModel
-    ) {}
+    private readonly UserEntity $user;
+    private readonly array $roles;
 
-    public function user(): UserModel
+    public function __construct(UserEntity $user, array $roles = [])
     {
-        return $this->userModel;
+        $this->user = $user;
+        $this->roles = $roles;
     }
 
-    public function role(): RoleModel
+    public function user(): UserEntity
     {
-        return $this->roleModel;
+        return $this->user;
+    }
+
+    public function roles(): array
+    {
+        return $this->roles;
+    }
+
+    public function addRole(RoleEntity $role): void
+    {
+        $this->roles[] = $role;
+    }
+
+    public function removeRole(RoleEntity $role): void
+    {
+        $this->roles = array_filter(
+            array: $this->roles,
+            callback: function(RoleEntity $value) use ($role) {
+                return $value->getUuid() !== $role->getUuid();
+            }
+        );
     }
 }

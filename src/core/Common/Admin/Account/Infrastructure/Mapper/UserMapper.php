@@ -13,19 +13,19 @@ use Core\Common\Admin\Account\Domain\Factory\UserFactory;
 use Core\Shared\Infrastructure\Eloquent\User as UserEloquent;
 use Illuminate\Pagination\LengthAwarePaginator;
 
-final class UserMapper
+final readonly class UserMapper
 {
-    public static function fromEloquent(UserEloquent $query): UserEntity
+    public static function fromEloquent(UserEloquent $user): UserEntity
     {
         return UserFactory::create(collection: [
-            'id' => new UserId(value: $query->id),
-            'avatar' => new Avatar(value: $query->avatar),
-            'firstName' => new FirstName(value: $query->first_name),
-            'lastName' => new LastName(value: $query->last_name),
-            'email' => new Email(value: $query->email),
-            'status' => new Status(value: $query->status),
-            'roles' => RoleMapper::fromCollection(
-                eloquent: $query->roles
+            'id' => new UserId(value: $user->id),
+            'avatar' => new Avatar(value: $user->avatar),
+            'firstName' => new FirstName(value: $user->first_name),
+            'lastName' => new LastName(value: $user->last_name),
+            'email' => new Email(value: $user->email),
+            'status' => new Status(value: $user->status),
+            'roles' => RoleMapper::fromEloquent(
+                roles: $user->roles
             ),
         ]);
     }

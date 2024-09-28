@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace Core\Shared\Domain\ValueObject\Role;
+namespace Core\Shared\Domain\ValueObject\User;
 
-use Core\Shared\Domain\Contract\ValueObjectContract;
+use Core\Shared\Domain\Contract\ValueObject;
 
-final class RoleId implements ValueObjectContract
+final class Password implements ValueObject
 {
-    private readonly string $id;
+    private readonly string $password;
 
     public function __construct(string $value)
     {
@@ -18,11 +18,11 @@ final class RoleId implements ValueObjectContract
             );
         }
 
-        $this->id = $value;
+        $this->password = $value;
     }
 
     public function value(): string
     {
-        return $this->id;
+        return $this->password;
     }
 }

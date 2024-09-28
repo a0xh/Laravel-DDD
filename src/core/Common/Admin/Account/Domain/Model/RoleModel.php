@@ -3,23 +3,23 @@
 namespace Core\Common\Admin\Account\Domain\Model;
 
 use Core\Common\Admin\Account\Domain\Entity\RoleEntity;
-use Core\Shared\Domain\ValueObject\Role\RoleId;
+use Core\Common\Admin\Account\Domain\ValueObject\Role\Uuid;
 
 final class RoleModel
 {
     private array $model;
 
-    public function __construct(array $collection = [])
+    public function __construct(array $data = [])
     {
-        $this->model = $collection;
+        $this->model = $data;
     }
 
     public function save(RoleEntity $entity): void
     {
-        $this->model[$entity->getId()->value()] = $entity;
+        $this->model[$entity->getUuid()] = $entity;
     }
 
-    public function find(RoleId $uuid)
+    public function find(Uuid $uuid)
     {
         return $this->model[$uuid->value()] ?? null;
     }
@@ -29,7 +29,7 @@ final class RoleModel
         return $this->model;
     }
 
-    public function delete(RoleId $uuid): void
+    public function delete(Uuid $uuid): void
     {
         unset($this->model[$uuid->value()]);
     }
