@@ -2,33 +2,27 @@
 
 namespace Core\Shared\Domain\ValueObject\Role;
 
-use Core\Shared\Domain\Contract\RoleVisitable;
-use Core\Shared\Domain\Contract\RoleVisitor;
-
-final class Slug implements RoleVisitable
+final class Slug
 {
     private readonly string $slug;
 
     public function __construct(string $value)
     {
-        $message = 'The Value Cannot Be Empty!';
-        
-        if (!filled(value: $value)) {
-            throw new \InvalidArgumentException(
-                message: $message
-            );
-        }
-
         $this->slug = $value;
     }
 
-    public function value(): string
+    public static function fromString(string $value): self
     {
-        return $this->slug;
+        return new self(value: $value);
     }
 
-    public function accept(RoleVisitor $visitor): string
+    public static function fromNullableString(?string $value): ?self
     {
-        return $visitor->visitSlug(name: $this);
+        return $value === null ? null : new self(value: $value);
+    }
+    
+    public function value(): string
+    {
+        return trim(string: $this->slug);
     }
 }

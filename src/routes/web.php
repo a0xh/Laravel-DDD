@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::namespace('Core\Common\Visitor\Presentation\Controller\Auth')->group(
+Route::namespace('Core\Common\Account\Presentation\Controller')->group(
     function (): void {
         Route::controller(Login::class)->group(function (): void {
             Route::get('login', 'showLoginForm')->name('login');
@@ -23,9 +23,8 @@ Route::namespace('Core\Common\Visitor\Presentation\Controller\Auth')->group(
     }
 );
 
-Route::namespace('Core\Common\Admin\Account\Presentation\Controller\User')->group(
+Route::namespace('Core\Common\Account\Presentation\Controller')->group(
     function (): void {
         Route::get('/admin/users', IndexController::class)->name('admin.users.index');
-        Route::get('/admin/users/{id}/edit', EditController::class)->name('admin.users.edit');
     }
 );

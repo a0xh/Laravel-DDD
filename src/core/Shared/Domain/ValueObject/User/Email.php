@@ -2,27 +2,27 @@
 
 namespace Core\Shared\Domain\ValueObject\User;
 
-use Core\Shared\Domain\Contract\ValueObject;
-
-final class Email implements ValueObject
+final class Email
 {
     private readonly string $email;
 
     public function __construct(string $value)
     {
-        $message = 'The Value Cannot Be Empty!';
-        
-        if (!filled(value: $value)) {
-            throw new \InvalidArgumentException(
-                message: $message
-            );
-        }
-
         $this->email = $value;
+    }
+
+    public static function fromString(string $value): self
+    {
+        return new self(value: $value);
+    }
+
+    public static function fromNullableString(?string $value): ?self
+    {
+        return $value === null ? null : new self(value: $value);
     }
 
     public function value(): string
     {
-        return $this->email;
+        return trim(string: $this->email);
     }
 }

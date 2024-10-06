@@ -7,17 +7,18 @@ use Illuminate\Support\Facades\Request;
 
 final class Paginator extends LengthAwarePaginator
 {
-	public function __construct(array $collection) {
+	public function __construct(array $items, int $perPage = 10)
+	{
 		parent::__construct(
-			items: collect(value: $collection)->slice(
+			items: collect(value: $items)->slice(
 				offset: (Request::get(
 					key: 'page',
 					default: 1
-				) - 1) * 10,
-				length: 10
-			)->values()->all(),
-			total: count(value: $collection),
-			perPage: 10,
+				) - 1) * $perPage,
+				length: $perPage
+			)->all(),
+			total: count(value: $items),
+			perPage: $perPage,
 			currentPage: Request::get(
 				key: 'page',
 				default: 1

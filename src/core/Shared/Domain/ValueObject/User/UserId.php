@@ -2,27 +2,27 @@
 
 namespace Core\Shared\Domain\ValueObject\User;
 
-use Core\Shared\Domain\Contract\ValueObject;
-
-final class UserId implements ValueObject
+final class UserId
 {
     private readonly string $id;
 
     public function __construct(string $value)
     {
-        $message = 'The Value Cannot Be Empty!';
-        
-        if (!filled(value: $value)) {
-            throw new \InvalidArgumentException(
-                message: $message
-            );
-        }
-
         $this->id = $value;
     }
 
-    public function value(): string
+    public static function fromString(string $value): self
     {
-        return $this->id;
+        return new self(value: $value);
+    }
+
+    public static function fromNullableString(?string $value): ?self
+    {
+        return $value === null ? null : new self(value: $value);
+    }
+
+    public function asString(): string
+    {
+        return trim(string: $this->id);
     }
 }

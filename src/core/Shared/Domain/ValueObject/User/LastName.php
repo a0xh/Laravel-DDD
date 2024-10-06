@@ -2,9 +2,7 @@
 
 namespace Core\Shared\Domain\ValueObject\User;
 
-use Core\Shared\Domain\Contract\ValueObject;
-
-final class LastName implements ValueObject
+final class LastName
 {
     private readonly ?string $lastName;
 
@@ -13,8 +11,18 @@ final class LastName implements ValueObject
         $this->lastName = $value;
     }
 
+    public static function fromString(string $value): self
+    {
+        return new self(value: $value);
+    }
+
+    public static function fromNullableString(?string $value): ?self
+    {
+        return new self(value: $value);
+    }
+
     public function value(): ?string
     {
-        return $this->lastName;
+        return trim(string: $this->lastName);
     }
 }

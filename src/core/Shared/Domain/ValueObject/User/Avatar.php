@@ -2,9 +2,7 @@
 
 namespace Core\Shared\Domain\ValueObject\User;
 
-use Core\Shared\Domain\Contract\ValueObject;
-
-final class Avatar implements ValueObject
+final class Avatar
 {
     private readonly ?string $avatar;
 
@@ -13,8 +11,18 @@ final class Avatar implements ValueObject
         $this->avatar = $value;
     }
 
+    public static function fromString(string $value): self
+    {
+        return new self(value: $value);
+    }
+
+    public static function fromNullableString(?string $value): ?self
+    {
+        return new self(value: $value);
+    }
+
     public function value(): ?string
     {
-        return $this->avatar;
+        return trim(string: $this->avatar);
     }
 }

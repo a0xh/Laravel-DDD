@@ -44,8 +44,8 @@ class Role extends Model
             'name' => 'string',
             'slug' => 'string',
             'description' => 'string',
-            'created_at' => 'datetime',
-            'updated_at' => 'datetime',
+            'created_at' => 'string',
+            'updated_at' => 'string',
         ];
     }
 
