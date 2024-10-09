@@ -23,8 +23,10 @@ Route::namespace('Core\Common\Account\Presentation\Controller')->group(
     }
 );
 
-Route::namespace('Core\Common\Account\Presentation\Controller')->group(
+Route::namespace('Core\Common\Account\Presentation\Action')->group(
     function (): void {
-        Route::get('/admin/users', IndexController::class)->name('admin.users.index');
+        Route::get('/admin/users', IndexAction::class)->name('admin.users.index');
+        Route::get('/admin/users/{id}/edit', EditAction::class)->name('admin.users.edit');
+        Route::get('/admin/users/create', CreateAction::class)->name('admin.users.create');
     }
 );

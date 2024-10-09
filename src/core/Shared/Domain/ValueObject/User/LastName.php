@@ -23,6 +23,6 @@ final class LastName
 
     public function value(): ?string
     {
-        return trim(string: $this->lastName);
+        return $this->lastName;
     }
 }

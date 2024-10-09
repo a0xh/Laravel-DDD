@@ -33,11 +33,12 @@ final class MemoryRepository implements RepositoryInterface
         $userId = $aggregate->user()->getId()->asString();
         
         if (isset($this->collection[$userId])) {
-            throw new UserSaveException("User with ID {$userId} already exists.");;
+            throw new UserSaveException(
+                "User with ID {$userId} already exists."
+            );
         }
         
         $this->collection[$userId] = $aggregate->user();
-        $aggregate->user()->setRoles(data: $aggregate->roles());
     }
     
     public function remove(UserId $id): void

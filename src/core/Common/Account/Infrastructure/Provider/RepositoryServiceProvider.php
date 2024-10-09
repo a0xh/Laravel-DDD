@@ -10,7 +10,8 @@ class RepositoryServiceProvider extends ServiceProvider
     {
         $this->app->when(
             concrete: [
-                \Core\Common\Account\Presentation\Controller\IndexController::class,
+                \Core\Common\Account\Presentation\Action\IndexAction::class,
+                \Core\Common\Account\Presentation\Action\EditAction::class,
             ]
         )->needs(
             abstract: \Core\Common\Account\Domain\Repository\RepositoryInterface::class

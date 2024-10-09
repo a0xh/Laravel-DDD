@@ -59,33 +59,33 @@
                                             @foreach ($users as $user)
                                                 <tr>
                                                     <td scope="row">
-                                                        @empty (!$user->getAvatar()->value())
-                                                            <img src="{{ Storage::url($user->getAvatar()->value()) }}" class="avatar rounded-circle">
+                                                        @empty (!$user['avatar'])
+                                                            <img src="{{ Storage::url($user['avatar']) }}" class="avatar rounded-circle">
                                                         @else
                                                             <img src="{{ asset('assets/img/avatar.png') }}" class="avatar rounded-circle">
                                                         @endempty
 
                                                         <span class="fw-bold ms-1">
-                                                            {{ $user->getFirstName()->value() }} {{ $user->getLastName()->value() }}
+                                                            {{ $user['first_name'] }} {{ $user['last_name'] }}
                                                         </span>
                                                     </td>
 
                                                     <td>
-                                                        <a href="mailto:{{ $user->getEmail()->value() }}" class="btn-link">
-                                                            {{ $user->getEmail()->value() }}
+                                                        <a href="mailto:{{ $user['email'] }}" class="btn-link">
+                                                            {{ $user['email'] }}
                                                         </a>
                                                     </td>
 
                                                     <td>
-                                                        @empty (!$user->getRoles())
-                                                            @foreach ($user->getRoles() as $role)
-                                                                {{ $role->getName() }}
+                                                        @empty (!$user['roles'])
+                                                            @foreach ($user['roles'] as $role)
+                                                                {{ ($role['name']) }}
                                                             @endforeach
                                                         @endempty
                                                     </td>
 
                                                     <td>
-                                                        @if ($user->getStatus()->value())
+                                                        @if ($user['status'])
                                                             <span class="badge bg-success">
                                                                 {{ __('Активный') }}
                                                             </span>
@@ -101,21 +101,21 @@
                                                     <td>
                                                         <div class="btn-group" role="group" aria-label="btn-group">
                                                             @if (Route::has('admin.user.show'))
-                                                                <a href="{{ route('admin.users.show', $user->getId()->value()) }}" class="btn btn-outline-secondary" title="{{ __('Посмотреть') }}">
+                                                                <a href="{{ route('admin.users.show', $user['id']) }}" class="btn btn-outline-secondary" title="{{ __('Посмотреть') }}">
                                                                     <i class="icofont-eye-open text-info"></i>
                                                                 </a>
                                                             @endif
 
                                                             @if (Route::has('admin.users.edit'))
-                                                                <a href="{{ route('admin.users.edit', $user->getId()->value()) }}" class="btn btn-outline-secondary" title="{{ __('Отредактировать') }}">
+                                                                <a href="{{ route('admin.users.edit', $user['id']) }}" class="btn btn-outline-secondary" title="{{ __('Отредактировать') }}">
                                                                     <i class="icofont-edit text-success"></i>
                                                                 </a>
                                                             @endif
 
                                                             @if (Route::has('admin.users.delete'))
-                                                                <form onsubmit="if (confirm('{{ __('Вы действительно хотите удалить данную запись из таблицы?') }}')) {return true} else {return false}" action="{{ route('admin.users.delete', $user->getId()->value()) }}" method="post">
+                                                                <form onsubmit="if (confirm('{{ __('Вы действительно хотите удалить данную запись из таблицы?') }}')) {return true} else {return false}" action="{{ route('admin.users.delete', $user['id']) }}" method="post">
 
-                                                                    <input type="hidden" name="id" value="{{ $user->getId()->value() }}">
+                                                                    <input type="hidden" name="id" value="{{ $user['id'] }}">
 
                                                                     @method('DELETE')
                                                                     @csrf

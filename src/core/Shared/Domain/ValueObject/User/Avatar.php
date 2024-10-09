@@ -21,8 +21,8 @@ final class Avatar
         return new self(value: $value);
     }
 
-    public function value(): ?string
+    public function value()
     {
-        return trim(string: $this->avatar);
+        return $this->avatar;
     }
 }
