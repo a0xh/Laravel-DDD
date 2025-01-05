@@ -1,4 +1,4 @@
-# Simple Web Application
+# Basic project in Laravel/DDD
 
 This is a simple web application built using Domain-Driven Design (DDD) and Hexagonal Architecture. The application leverages several design patterns and principles to ensure a clean and maintainable codebase.
 
