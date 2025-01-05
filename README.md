@@ -48,15 +48,3 @@ composer install
 ```
 php -S localhost:8000 -t public
 ```
-
-## Usage
-
-[Provide instructions on how to use your application, including any relevant examples or screenshots.]
-
-## Contributing
-
-If you would like to contribute to this project, please fork the repository and submit a pull request.
-
-## License
-
-[Specify the license under which your project is distributed.]
