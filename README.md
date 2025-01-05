@@ -11,12 +11,6 @@ This is a simple web application built using Domain-Driven Design (DDD) and Hexa
 - **Repository Pattern**: Provides a centralized way to manage data access, abstracting the underlying data storage mechanism.
 - **Action Domain Responder**: Replaces the traditional MVC pattern, allowing for a more straightforward handling of user actions and responses.
 
-## Technologies Used
-
-- PHP
-- [Your Framework/Library] (if applicable)
-- [Any other technologies you used]
-
 ## Installation
 
 To install and run this application locally, follow these steps:
