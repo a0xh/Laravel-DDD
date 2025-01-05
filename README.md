@@ -1,4 +1,4 @@
-# Basic project in Laravel/DDD
+# Domain-Driven Design (DDD) in Laravel
 
 This is a simple web application built using Domain-Driven Design (DDD) and Hexagonal Architecture. The application leverages several design patterns and principles to ensure a clean and maintainable codebase.
 
@@ -10,6 +10,10 @@ This is a simple web application built using Domain-Driven Design (DDD) and Hexa
 - **Decorator Pattern**: Enhances the functionality of existing classes without modifying their structure, promoting code reuse.
 - **Repository Pattern**: Provides a centralized way to manage data access, abstracting the underlying data storage mechanism.
 - **Action Domain Responder**: Replaces the traditional MVC pattern, allowing for a more straightforward handling of user actions and responses.
+- **In-Memory Data Handling**: Utilizes in-memory data management to improve performance by reducing database calls during certain operations.
+- **Doctrine ORM**: Implements Doctrine ORM for robust data mapping and persistence, allowing for complex queries and relationships while maintaining a clear separation between domain logic and data access.
+
+By integrating in-memory data handling and utilizing Doctrine ORM, the application enhances its performance and maintains a clean architecture that aligns with DDD principles.
 
 ## Installation
 
