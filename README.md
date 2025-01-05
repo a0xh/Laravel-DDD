@@ -24,7 +24,7 @@ git clone https://github.com/a0xh/Laravel-DDD.git
 2. Navigate to the project directory:
 
 ```
-cd laravel-ddd
+cd Laravel-DDD
 ```
 
 
