@@ -3,6 +3,7 @@
 namespace Core\Common\User\Presentation\Controller\Api\V1\Show;
 
 use Core\Shared\Presentation\Response\ResourceResponse;
+use Core\Common\User\Presentation\Resource\ShowUserResource;
 use Core\Common\User\Domain\Entity\User;
 
 final readonly class ShowUserResponder

@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Core\Common\User\Domain\ValueObject\UserId;
+use Core\Common\User\Domain\ValueObject\Email;
 use Core\Common\Role\Domain\Entity\Role;
 use Carbon\Carbon;
 
@@ -29,8 +30,8 @@ final class User
     #[ORM\Column(name: 'phone', type: 'string', length: 20, unique: true, nullable: true)]
     private private(set) ?string $phone;
 
-    #[ORM\Column(name: 'email', type: 'string', length: 255, unique: true)]
-    private private(set) string $email;
+    #[ORM\Embedded(class: Email::class, columnPrefix: false)]
+    private private(set) Email $email;
 
     #[ORM\Column(name: 'email_verified_at', type: 'datetime_immutable', nullable: true)]
     private private(set) ?\DateTimeImmutable $emailVerifiedAt = null;
@@ -85,14 +86,24 @@ final class User
         return $this->id;
     }
 
-    public function getFristName(): string
+    public function getFirstName(): string
     {
         return $this->firstName;
+    }
+
+    public function setFirstName(string $firstName): void
+    {
+        $this->firstName = $firstName;
     }
 
     public function getLastName(): string
     {
         return $this->lastName;
+    }
+
+    public function setLastName(string $lastName): void
+    {
+        $this->lastName = $lastName;
     }
 
     public function getPatronymic(): ?string
@@ -115,9 +126,14 @@ final class User
         $this->phone = $phone;
     }
 
-    public function getEmail(): string
+    public function getEmail(): Email
     {
         return $this->email;
+    }
+
+    public function setEmail(Email $email): void
+    {
+        $this->email = $email;
     }
 
     public function hasVerifiedEmail(): bool

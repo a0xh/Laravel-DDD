@@ -23,4 +23,4 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
-/.worker.log
+/worker.log

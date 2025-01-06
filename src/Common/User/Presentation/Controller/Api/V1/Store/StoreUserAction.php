@@ -4,6 +4,7 @@ namespace Core\Common\User\Presentation\Controller\Api\V1\Store;
 
 use Core\Shared\Presentation\Controller\Controller;
 use Core\Common\User\Application\Command\CreateUserCommand;
+use Core\Common\User\Presentation\Request\StoreUserRequest;
 use Spatie\RouteAttributes\Attributes\Prefix;
 use Spatie\RouteAttributes\Attributes\Middleware;
 use Spatie\RouteAttributes\Attributes\Post;
@@ -11,7 +12,7 @@ use Core\Shared\Presentation\Response\MessageResponse;
 use Core\Shared\Domain\Contract\CommandBusContract;
 
 #[Prefix(prefix: 'v1')]
-//#[Middleware(middleware: 'auth:sanctum')]
+#[Middleware(middleware: 'auth:sanctum')]
 final class StoreUserAction extends Controller
 {
 	private readonly private(set) CommandBusContract $commandBus;

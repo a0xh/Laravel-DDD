@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace Core\Common\User\Presentation\Controller\Api\V1\Show;
+namespace Core\Common\User\Presentation\Resource;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Core\Common\Role\Domain\Entity\Role;
 
-final class ShowUserResource extends JsonResource
+final class IndexUserResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,7 +17,7 @@ final class ShowUserResource extends JsonResource
     {
         return [
             'id' => $this->getId(),
-            'first_name' => $this->getFristName(),
+            'first_name' => $this->getFirstName(),
             'last_name' => $this->getLastName(),
             'patronymic' => $this->getPatronymic(),
             'phone' => $this->getPhone(),

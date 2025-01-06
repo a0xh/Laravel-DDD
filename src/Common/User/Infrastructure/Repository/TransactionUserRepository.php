@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\{DB, Log};
 
 final class TransactionUserRepository implements UserRepositoryInterface
 {
-	private private(set) QueryUserRepository $query;
+	private readonly private(set) QueryUserRepository $query;
 
 	public function __construct(QueryUserRepository $query)
 	{

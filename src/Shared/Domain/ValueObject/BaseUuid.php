@@ -7,7 +7,7 @@ use Ramsey\Uuid\Uuid;
 
 abstract class BaseUuid implements \JsonSerializable
 {
-    protected string $id;
+    protected protected(set) string $id;
 
     public function __construct(string $id)
     {

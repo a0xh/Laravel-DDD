@@ -15,19 +15,29 @@ use Doctrine\ORM\ORMException;
 final class QueryUserRepository extends UserDecoratorRepository 
 {
     public function __construct(
-        private private(set) EntityManagerInterface $entityManager
+        private readonly private(set) EntityManagerInterface $entityManager
     ) {}
 
     public function all(): array
     {
-        return $this->entityManager->getRepository(
-            className: User::class
-        )->findAll();
+        $users = $this->entityManager->createQueryBuilder()
+            ->select('u', 'r')->from(
+                from: User::class,
+                alias: 'u'
+            )->leftJoin(
+                join: 'u.roles',
+                alias: 'r'
+            )->orderBy(
+                sort: 'u.createdAt',
+                order: Criteria::DESC
+            )->getQuery();
+
+        return $users->getResult();
     }
 
     public function paginate(int $perPage = 11): LengthAwarePaginator
     {
-        return new Paginator(
+        $users = new Paginator(
             items: $this->entityManager->getRepository(
                 className: User::class
             )->orderBy(
@@ -36,6 +46,8 @@ final class QueryUserRepository extends UserDecoratorRepository
             )->findAll(),
             perPage: $perPage
         );
+
+        return $users;
     }
 
     public function findById(UserId $id): ?User

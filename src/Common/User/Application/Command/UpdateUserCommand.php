@@ -6,15 +6,16 @@ use WendellAdriel\ValidatedDTO\SimpleDTO;
 use WendellAdriel\ValidatedDTO\Concerns\EmptyCasts;
 use WendellAdriel\ValidatedDTO\Casting\StringCast;
 use WendellAdriel\ValidatedDTO\Casting\BooleanCast;
-use WendellAdriel\ValidatedDTO\Casting\ObjectCast;
 use WendellAdriel\ValidatedDTO\Attributes\Cast;
 use Core\Common\Role\Domain\ValueObject\RoleId;
+use Core\Common\User\Domain\ValueObject\UserId;
 use Illuminate\Support\Facades\Hash;
 
-class CreateUserCommand extends SimpleDTO
+class UpdateUserCommand extends SimpleDTO
 {
     use EmptyCasts;
 
+    public public(set) string $id;
     public public(set) string $firstName;
     public public(set) string $lastName;
     public public(set) string $patronymic;
@@ -27,15 +28,17 @@ class CreateUserCommand extends SimpleDTO
     protected function defaults(): array
     {
         return [
+            'id' => new UserId(id: $this->id)
             'password' => Hash::make(value: $this->password),
             'isActive' => true,
-            'roleId' => new RoleId(id: $this->roleId)
+            'roleId' => new RoleId(id: $this->roleId),
         ];
     }
 
     protected function casts(): array
     {
         return [
+            'id' => new StringCast(),
             'firstName' => new StringCast(),
             'lastName' => new StringCast(),
             'patronymic' => new StringCast(),
@@ -43,7 +46,7 @@ class CreateUserCommand extends SimpleDTO
             'email' => new StringCast(),
             'password' => new StringCast(),
             'isActive' => new BooleanCast(),
-            'roleId' => new ObjectCast(),
+            'roleId' => new StringCast(),
         ];
     }
 

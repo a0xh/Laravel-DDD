@@ -21,6 +21,6 @@ final class Slug extends BaseSlug
     
     public function jsonSerialize(): string
     {
-        return $this->value();
+        return $this->asString();
     }
 }

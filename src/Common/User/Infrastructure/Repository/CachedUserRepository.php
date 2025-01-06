@@ -18,8 +18,8 @@ final class CachedUserRepository extends UserDecoratorRepository
 	private const CACHE_USER_ALL_KEY = 'users';
 
 	public function __construct(
-		private private(set) QueryUserRepository $query,
-		private private(set) TransactionUserRepository $transaction,
+		private readonly private(set) QueryUserRepository $query,
+		private readonly private(set) TransactionUserRepository $transaction,
 	) {}
 
 	public function all(): array

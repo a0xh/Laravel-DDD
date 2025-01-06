@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Core\Common\User\Presentation\Controller\Api\V1\Show;
+namespace Core\Common\User\Presentation\Controller\Api\V1\Index;
 
 use Core\Shared\Presentation\Controller\Controller;
-use Core\Common\User\Application\Query\GetUserByIdQuery;
+use Core\Common\User\Application\Query\GetAllUsersQuery;
 use Spatie\RouteAttributes\Attributes\Prefix;
 use Spatie\RouteAttributes\Attributes\Middleware;
 use Spatie\RouteAttributes\Attributes\Get;
@@ -12,9 +12,8 @@ use Core\Shared\Presentation\Response\ResourceResponse;
 use Core\Shared\Domain\Contract\QueryBusContract;
 
 #[Prefix(prefix: 'v1')]
-#[WhereUuid(param: 'id')]
-#[Middleware(middleware: 'auth:sanctum')]
-final class ShowUserAction extends Controller
+//#[Middleware(middleware: 'auth:sanctum')]
+final class IndexUserAction extends Controller
 {
 	private readonly private(set) QueryBusContract $queryBus;
 
@@ -23,12 +22,12 @@ final class ShowUserAction extends Controller
 		$this->queryBus = $queryBus;
 	}
 
-	#[Get(uri: '/users/{id}/show', name: 'api.v1.users.show')]
-	public function __invoke(string $id): ResourceResponse
+	#[Get(uri: '/users', name: 'api.v1.users.index')]
+	public function __invoke(): ResourceResponse
 	{
-		return new ShowUserResponder()->handle(
-			user: $this->queryBus->ask(
-				query: new GetUserByIdQuery(userId: $id)
+		return new IndexUserResponder()->handle(
+			users: $this->queryBus->ask(
+				query: new GetAllUsersQuery()
 			)
 		);
 	}

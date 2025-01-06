@@ -13,6 +13,12 @@ return [
      * Optionally, you can specify group configuration by using key/values
      */
     'directories' => [
+        base_path('src/Common/User/Presentation/Controller/Api/V1/Index') => [
+            'namespace' => 'Core\Common\User\Presentation\Controller\Api\V1\Index\\',
+            'prefix' => 'api',
+            'middleware' => 'api',
+            'patterns' => ['*Action.php']
+        ],
         base_path('src/Common/User/Presentation/Controller/Api/V1/Show') => [
             'namespace' => 'Core\Common\User\Presentation\Controller\Api\V1\Show\\',
             'prefix' => 'api',
@@ -21,6 +27,18 @@ return [
         ],
         base_path('src/Common/User/Presentation/Controller/Api/V1/Store') => [
             'namespace' => 'Core\Common\User\Presentation\Controller\Api\V1\Store\\',
+            'prefix' => 'api',
+            'middleware' => 'api',
+            'patterns' => ['*Action.php']
+        ],
+        base_path('src/Common/User/Presentation/Controller/Api/V1/Update') => [
+            'namespace' => 'Core\Common\User\Presentation\Controller\Api\V1\Update\\',
+            'prefix' => 'api',
+            'middleware' => 'api',
+            'patterns' => ['*Action.php']
+        ],
+        base_path('src/Common/User/Presentation/Controller/Api/V1/Destroy') => [
+            'namespace' => 'Core\Common\User\Presentation\Controller\Api\V1\Destroy\\',
             'prefix' => 'api',
             'middleware' => 'api',
             'patterns' => ['*Action.php']

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Core\Common\User\Presentation\Controller\Api\V1\Store;
+namespace Core\Common\User\Presentation\Request;
 
 use Core\Shared\Presentation\Request\FormRequest;
 use Illuminate\Validation\Rules\Password;

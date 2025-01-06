@@ -11,7 +11,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 final class UserRepository extends UserDecoratorRepository
 {
     public function __construct(
-        private private(set) CachedUserRepository $cached,
+        private readonly private(set) CachedUserRepository $cached,
         private private(set) MemoryUserRepository $memory
     ) {
         $this->initializeCollection();
