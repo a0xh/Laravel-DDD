@@ -2,30 +2,30 @@
 
 namespace Core\Common\User\Infrastructure\Repository;
 
-use Core\Common\User\Domain\Entity\User;
-use Core\Common\User\Domain\Repository\UserDecoratorRepository;
-use Core\Common\User\Domain\ValueObject\UserId;
-use Core\Common\User\Domain\ValueObject\Email;
+use Core\Shared\Domain\Entity\User;
+use Core\Common\User\Domain\Repository\DecoratorRepository;
+use Core\Shared\Domain\ValueObject\User\UserId;
+use Core\Shared\Domain\ValueObject\User\Email;
 use Illuminate\Pagination\LengthAwarePaginator;
 
-final class UserRepository extends UserDecoratorRepository
+final class UserRepository extends DecoratorRepository
 {
     public function __construct(
-        private readonly private(set) CachedUserRepository $cached,
-        private private(set) MemoryUserRepository $memory
+        private readonly private(set) CachedRepository $cached,
+        private private(set) MemoryRepository $memory
     ) {
-        $this->initializeCollection();
+        if (count(value: $this->memory->all()) === 0) {
+            $this->initializeCollection();
+        }
     }
 
     private function initializeCollection(): void
     {
-        if (count(value: $this->memory->all()) === 0) {
-            $collection = collect(value: $this->cached->all());
-            
-            $collection->each(callback: function(User $user): void {
-                $this->memory->save(user: $user);
-            });
-        }
+        $collection = collect(value: $this->cached->all());
+
+        $collection->each(callback: function(User $user): void {
+            $this->memory->save(user: $user);
+        });
     }
 
     public function all(): array

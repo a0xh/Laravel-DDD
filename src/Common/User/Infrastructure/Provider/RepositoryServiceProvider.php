@@ -3,8 +3,8 @@
 namespace Core\Common\User\Infrastructure\Provider;
 
 use Illuminate\Support\ServiceProvider;
-use Core\Common\User\Domain\Repository\UserRepositoryInterface;
 use Core\Common\User\Infrastructure\Repository\UserRepository;
+use Core\Shared\Domain\Repository\UserRepositoryInterface;
 
 final class RepositoryServiceProvider extends ServiceProvider
 {

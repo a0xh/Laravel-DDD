@@ -2,8 +2,8 @@
 
 namespace Core\Common\User\Infrastructure\Type;
 
-use Core\Common\User\Domain\ValueObject\UserId;
 use Core\Shared\Infrastructure\Type\UuidType;
+use Core\Shared\Domain\ValueObject\User\UserId;
 
 final class UserIdType extends UuidType
 {

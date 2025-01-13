@@ -4,20 +4,20 @@ namespace Core\Shared\Presentation\Response;
 
 use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Http\{JsonResponse, Response};
+use Illuminate\Support\Facades\Context;
 
 final class MessageResponse implements Responsable
 {
-    private readonly int $status;
-    private readonly string $message;
-
-    public function __construct(int $status, string $message)
-    {
-        $this->status = $status;
-        $this->message = $message;
-    }
+    public function __construct(
+        private readonly private(set) string $message,
+        private readonly private(set) int $status,
+    ) {}
 
     public function toResponse($request): JsonResponse
     {
+        $requestId = Context::get(key: 'request_id');
+        $timestamp = Context::get(key: 'timestamp');
+
         return new JsonResponse(
             data: [
                 'status' => $this->status,
@@ -25,8 +25,8 @@ final class MessageResponse implements Responsable
                     'message' => __(key: $this->message),
                 ],
                 'metadata' => [
-                    'request_id' => str()->uuid()->toString(),
-                    'timestamp' => now()->toIso8601String()
+                    'request_id' => $requestId,
+                    'timestamp' => $timestamp
                 ],
             ],
             status: $this->status

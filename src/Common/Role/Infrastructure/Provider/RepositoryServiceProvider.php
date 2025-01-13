@@ -3,8 +3,8 @@
 namespace Core\Common\Role\Infrastructure\Provider;
 
 use Illuminate\Support\ServiceProvider;
-use Core\Common\Role\Domain\Repository\RoleRepositoryInterface;
 use Core\Common\Role\Infrastructure\Repository\RoleRepository;
+use Core\Shared\Domain\Repository\RoleRepositoryInterface;
 
 final class RepositoryServiceProvider extends ServiceProvider
 {

@@ -6,6 +6,7 @@ use App\Http\Controllers\ExampleController;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/test-rabbitmq', function () {
     \App\Jobs\TestRabbitMQJob::dispatch()->onQueue('rabbit');
     return 'Job dispatched!';

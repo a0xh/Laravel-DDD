@@ -2,16 +2,16 @@
 
 namespace Core\Common\Role\Infrastructure\Repository;
 
-use Core\Common\Role\Domain\Entity\Role;
-use Core\Common\Role\Domain\Repository\RoleDecoratorRepository;
-use Core\Common\Role\Domain\ValueObject\RoleId;
-use Core\Common\Role\Domain\ValueObject\Slug;
+use Core\Shared\Domain\Entity\Role;
+use Core\Common\Role\Domain\Repository\DecoratorRepository;
+use Core\Shared\Domain\ValueObject\Role\RoleId;
+use Core\Shared\Domain\ValueObject\Role\Slug;
 
-final class RoleRepository extends RoleDecoratorRepository
+final class RoleRepository extends DecoratorRepository
 {
     public function __construct(
-        private private(set) CachedRoleRepository $cached,
-        private private(set) MemoryRoleRepository $memory
+        private readonly private(set) CachedRepository $cached,
+        private private(set) MemoryRepository $memory
     ) {
         $this->initializeCollection();
     }
@@ -55,13 +55,13 @@ final class RoleRepository extends RoleDecoratorRepository
 
     public function findBySlug(Slug $slug): ?Role
     {
-        $memory = $this->memory->findByEmail(email: $email);
+        $memory = $this->memory->findBySlug(slug: $slug);
 
         if ($memory !== null) {
             return $memory;
         }
         
-        $cached = $this->cached->findByEmail(email: $email);
+        $cached = $this->cached->findBySlug(slug: $slug);
         
         return $cached;
     }

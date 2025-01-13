@@ -3,7 +3,7 @@
 namespace Core\Common\Role\Infrastructure\Type;
 
 use Core\Shared\Infrastructure\Type\UuidType;
-use Core\Common\Role\Domain\ValueObject\RoleId;
+use Core\Shared\Domain\ValueObject\Role\RoleId;
 
 final class RoleIdType extends UuidType
 {

@@ -36,13 +36,15 @@ final class UserFactory extends Factory
             'patronymic' => fake()->firstNameMale() . 'ович',
             'phone' => $phoneNumber,
             'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => new \DateTimeImmutable(),
-            'is_active' => fake()->boolean(),
+            'email_verified_at' => new \DateTimeImmutable(
+                datetime: 'now',
+                timezone: new \DateTimeZone(timezone: 'UTC')
+            ),
             'password' => Hash::make(
                 value: Str::password(length: 18),
                 options: []
             ),
-            'remember_token' => Str::random(length: 80),
+            'is_active' => fake()->boolean(),
         ];
     }
 

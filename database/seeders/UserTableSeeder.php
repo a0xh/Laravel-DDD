@@ -2,11 +2,12 @@
 
 namespace Database\Seeders;
 
-use Core\Common\User\Domain\Entity\User;
-use Core\Common\Role\Domain\Entity\Role;
+use Core\Shared\Domain\Entity\User;
+use Core\Shared\Domain\Entity\Role;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Doctrine\ORM\EntityManagerInterface;
+use Core\Shared\Domain\ValueObject\User\Email;
 use Illuminate\Database\Seeder;
 
 final class UserTableSeeder extends Seeder
@@ -33,18 +34,13 @@ final class UserTableSeeder extends Seeder
             $user = new User(
                 firstName: $data['first_name'],
                 lastName: $data['last_name'],
-                patronymic: $data['patronymic'],
-                phone: $data['phone'],
-                email: $data['email'],
+                email: new Email($data['email']),
                 password: $data['password'],
-                isActive: $data['is_active']
             );
 
-            $user->markEmailAsVerified();
-
-            $user->setRememberToken(
-                token: $data['remember_token']
-            );
+            $user->setPatronymic(patronymic: $data['patronymic']);
+            $user->setPhone(phone: $data['phone']);
+            $user->setStatus(status: $data['is_active']);
 
             if (!empty($roles)) {
                 $random = $roles[

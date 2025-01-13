@@ -1,7 +1,7 @@
-<?php
+<?php declare(strict_types=1);
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('media', function (Blueprint $table): void {
-            $table->uuid(column: 'id')->primary()->unique();
-            $table->uuid('model_id');
-            $table->string('model_type');
-            $table->string('file');
-            $table->string('collection');
-            $table->timestamps();
-        });
+        Schema::create(table: 'media',
+            callback: function (Blueprint $table): void {
+                $table->comment(comment: 'Медиа');
 
-        Schema::table('media', function (Blueprint $table): void {
-            $table->index(['model_id', 'model_type']);
-        });
+                $table->string(column: 'entity_type')->index();
+                $table->uuid(column: 'entity_id')->index();
+                $table->string(column: 'file');
+                $table->timestampsTz(precision: 0);
+
+                $table->index(columns: ['created_at']);
+            }
+        );
     }
 
     /**
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('media');
+        Schema::dropIfExists(table: 'media');
     }
 };

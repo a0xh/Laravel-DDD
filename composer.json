@@ -34,6 +34,9 @@
         "psr-4": {
             "App\\": "app/",
             "Core\\": "src/",
+            "Core\\Auth\\Controller\\": "src/Common/Auth/Presentation/Controller",
+            "Core\\User\\Controller\\": "src/Common/User/Presentation/Controller",
+            "Core\\Role\\Controller\\": "src/Common/Role/Presentation/Controller",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }

@@ -6398,3 +6398,1224 @@ In doctrine.php line 25:
   Class "Core\Shared\Infrastructure\Type\UserIdType" not found  
                                                                 
 
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare interface Core\Shared\Domain\Contract\Bus\QueryBusContract (previously declared in /var/www/html/back/src/Shared/Domain/Contract/QueryBusContract.php:5)
+
+  at src/Shared/Domain/Contract/QueryBusContract.php:5
+      1▕ <?php declare(strict_types=1);
+      2▕ 
+      3▕ namespace Core\Shared\Domain\Contract\Bus;
+      4▕ 
+  ➜   5▕ interface QueryBusContract
+      6▕ {
+      7▕     public function ask(object $query): mixed;
+      8▕     public function register(array $map): void;
+      9▕ }
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+

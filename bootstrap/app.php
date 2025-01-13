@@ -5,6 +5,7 @@ use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Illuminate\Http\Middleware\HandleCors;
 use Illuminate\Http\Request;
+use Core\Shared\Infrastructure\Middleware\ApiRequestLogger;
 
 return Application::configure(
     basePath: dirname(path: __DIR__)
@@ -15,10 +16,11 @@ return Application::configure(
     health: '/up',
 )->withMiddleware(
     callback: function (Middleware $middleware): void {
-        $middleware->web(append: HandleCors::class);
+        $middleware->web(append: [HandleCors::class]);
+        $middleware->api(append: [ApiRequestLogger::class]);
     }
 )->withExceptions(
-    using: function (Exceptions $exceptions): void {
+    using: function (Exceptions $e): void {
         // $exceptions->shouldRenderJsonWhen(
         //     callback: function (Request $request, \Throwable $e): bool {
         //         if ($request->is(patterns: 'api/*')) {

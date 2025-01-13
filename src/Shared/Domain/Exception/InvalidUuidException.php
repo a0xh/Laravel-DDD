@@ -4,7 +4,7 @@ namespace Core\Shared\Domain\Exception;
 
 final class InvalidUuidException extends \InvalidArgumentException
 {
-    public const CODE_INVALID_UUID = 400;
+    public const CODE_INVALID_UUID = 1000;
 
     public function __construct(
         string $message,

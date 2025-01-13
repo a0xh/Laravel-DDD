@@ -17,8 +17,7 @@ return [
         ],
     ],
     'metadata_dirs' => [
-        base_path(path: 'src/Common/Role/Domain/Entity'),
-        base_path(path: 'src/Common/User/Domain/Entity'),
+        base_path(path: 'src/Shared/Domain/Entity'),
     ],
     'custom_types' => [
         UuidType::NAME => UuidType::class,

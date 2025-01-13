@@ -4,7 +4,7 @@ namespace Core\Shared\Infrastructure\Type;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;
-use Core\Shared\Domain\ValueObject\BaseUuid;
+use Core\Shared\Domain\Abstract\BaseUuid;
 
 abstract class UuidType extends Type
 {

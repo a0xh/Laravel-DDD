@@ -5,11 +5,12 @@ namespace Core\Shared\Presentation\Response;
 use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Support\MessageBag;
 use Illuminate\Http\{JsonResponse, Response};
+use Illuminate\Support\Facades\Context;
 
 final class FailedValidationExceptionResponse implements Responsable
 {
-    private readonly private(set) int $status;
     private readonly private(set) MessageBag $errors;
+    private readonly private(set) int $status;
 
     public function __construct(MessageBag $errors)
     {
@@ -27,8 +28,8 @@ final class FailedValidationExceptionResponse implements Responsable
                     'errors' => $this->errors
                 ],
                 'metadata' => [
-                    'request_id' => str()->uuid()->toString(),
-                    'timestamp' => now()->toIso8601String()
+                    'request_id' => Context::get(key: 'request_id'),
+                    'timestamp' => Context::get(key: 'timestamp')
                 ],
             ],
             status: $this->status
